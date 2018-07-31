@@ -50,5 +50,5 @@ for (var i = 1; i <= 100; i++) {
  //9.
  for (var i = 1; i <= 100;i++) {
    if (i==17 && 43) {
-     
+     console.log();
    }
