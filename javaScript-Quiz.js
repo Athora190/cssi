@@ -32,7 +32,7 @@ else {
 }
 
 //6.
-if (num<=-50) {
+if (num<=-50 && num >=50) {
   console.log("true");
 }
 else {
@@ -52,4 +52,3 @@ for (var i = 1; i <= 100; i++) {
    if (i==17 && 43) {
      console.log();
    }
-   
