@@ -13,3 +13,37 @@
 // limitations under the License.
 
 console.log("script is running...");
+function Basic_Alarm(alarmMessage){
+  return alarmMessage;
+};
+console.log(Basic_Alarm("My alarm!"));
+//My Alarm
+function My_Alarm(alarmMessage){
+return alarmMessage;
+};
+console.log("Hey, Jade, wake up! It's 10:00!");
+// Mom's Alarm
+function Mom_Alarm(alarmMessage){
+  return alarmMessage;
+};
+console.log("Hey, Mom, wake up! It's 6:00!");
+//My sister's Alarm
+
+function Family_Alarm(person,time){
+
+  return 'hey,' + person + ", wake up! It's, " + time;
+
+};
+console.log(Family_Alarm("Blyss", "12:00!"));
+//Important Alarm
+function Important_Alarm(alarmMessage){
+  return "WAKE UP, WAKE UP";
+}
+console.log(Important_Alarm('wake up, wake up'));
+//Snooze Button
+function Snooze_Alarm(originaltime){
+  let Newtime = originaltime + 1;
+  return "the alarm for, " + originaltime + " has been changed to, " + Newtime;
+
+};
+console.log(Snooze_Alarm(12));
