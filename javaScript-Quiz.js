@@ -52,3 +52,49 @@ for (var i = 1; i <= 100; i++) {
    if (i==17 && 43) {
      console.log();
    }
+//New Quiz
+
+//1.
+console.log("I will succeed.");
+
+//2.
+console.log(lname,fname);
+
+//3.
+let temp = x
+let y = temp
+let x = y
+
+//4.
+when !hasAcess is true or when hasPass is false then and !hasPass is true.
+
+//5.
+if (x < y) {
+  console.log(x);
+
+}
+else {
+  console.log(y);
+}
+
+//6.
+if (num <= -10 || num >=10 ) {
+   console.log(num);
+}
+
+//7.
+
+
+
+
+//8.
+for (let i = 7; i < 77; i++){
+  console.log(i);
+}
+
+//9.
+for (var i = 10; i < 90; i++) {
+  if (i === 22 && 56 ) {
+
+  }
+}
