@@ -13,11 +13,17 @@
 // limitations under the License.
 
 console.log("Running Window Events Script");
-window.addEventListener("keypress", e=> {
+window.addEventListener("keypress", (e)=> {
 console.log(e.keyCode);
 
 
 })
+let box6 =  document.querySelector('#box6');
+let box7 =  document.querySelector('#rect');
 
 
 // insert a function that prints out the key code of a key pressed
+function Keys(box6){
+  window.addEventListener("keypress",(e)=>{
+
+  })
