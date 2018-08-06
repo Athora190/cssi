@@ -26,8 +26,7 @@ box2.addEventListener('click',() => setColor('box1','box3','pink'));
 box3.addEventListener('click',() => setColor('box1','box2','orange'));
 box4.addEventListener('click',() => {toggle(box4);});
 box5.addEventListener('click',() => {toggle(box5);});
-box6.addEventListener('click',() => setColor('box1','box2','orange'));
-box7.addEventListener('click',() => setColor('box1','box2','orange'));
+
 function setColor(boxid1,boxid2, boxColor){
     let box =document.getElementById(boxid1);
     box.style.backgroundColor = boxColor;
