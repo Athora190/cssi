@@ -67,10 +67,6 @@ while choice.lower() != "e":
             item = raw_input("would you like to add it? ")
             if item == 'yes':
                 shopping_list.append(find)
-        
-
-
-
 
     if 'd' == choice:
         print "The items in your list are " + str(printList())
