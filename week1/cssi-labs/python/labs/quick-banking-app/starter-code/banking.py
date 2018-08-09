@@ -17,4 +17,26 @@
 # Replace "pass" with your code
 
 class BankAccount(object):
-    pass
+    def __init__(self,label,balance):
+        self.label = label
+        self.balance = balance
+
+    def __str__(self):
+        return '%s %s' %(self.label,self.balance)
+
+    def withdraw(self,amount):
+        if amount > 0 and (self.balance - amount) >= 0:
+            self.balance -= amount
+
+    def deposit(self,amount):
+        if amount > 0:
+            self.balance += amount
+
+    def rename(self,name):
+        if name != "":
+            self.label = name
+
+    def transfer(self,dest_account,amount):
+        if amount > 0 and (self.balance - amount) >= 0:
+            dest_account.deposit(amount)
+            self.withdraw(amount)
