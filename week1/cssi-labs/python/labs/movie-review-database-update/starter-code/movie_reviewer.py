@@ -42,3 +42,32 @@ inside_movie['genre'] = ['Animation', 'Advanture','Comedy']
 #printing dictionary
 for x in inside_movie:
     print x,':',inside_movie[x]
+
+#shrek review
+
+shrek_movie = {
+'title':'Shrek',
+"id": "tt0126029",
+"year_released": 2001,
+"rating": "PG",
+"score": 7.9,
+"genre": ['Advanture','Advanture','Comedy'],
+"reviews": 531432
+
+}
+
+movies = [shrek_movie,inside_movie]
+
+user = raw_input("Enter a movie genre ").capitalize()
+
+temp = {
+'title': 'none','score':0
+}
+
+for x in movies:
+    if user in x ['genre']:
+        if temp['score'] < x['score']:
+            temp['score'] = x['score']
+            temp['title'] = x['title']
+
+print temp['title']
