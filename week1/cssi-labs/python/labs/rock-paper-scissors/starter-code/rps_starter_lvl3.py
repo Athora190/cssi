@@ -15,20 +15,26 @@
 # limitations under the License.
 
 import random
-
+r = "rock"
+p = 'paper'
+s = "scissors"
 
 def get_player_move():
     """Asks the user to enter a move as 'r', 'p', or 's', and return it"""
-    
-    # TODO
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+     # TODO
+     move = input("Enter R for rock, P for paper, or S for scissors").lower()
+    return move
+print(get_player_move())
 
 def get_computer_move():
     """Randomly generates the computer's move and
     returns it in the form of 'r', 'p', or 's'"""
     
     # TODO
-
+    comMove = random.randint(r,p,s)
+    return comMove
+print(get_computer_move()) 
 
 def determine_winner(player_move, comp_move):
     """Takes in a player move and computer move each as 'r', 'p', or 's',
