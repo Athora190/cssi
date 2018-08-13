@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="fortune-style.css">
+    <style>
+    body{
+      background-color: darkslateblue;
+      margin: 10px;
+    }
+
+    h1 {
+      color: white;
+      display: inline-block;
+    }
+
+    img{
+      display: inline-block;
+    }
+
+
+    .main{
+      border: solid white 2px;
+      padding: 10px;
+    }
+
+    #star-img{
+        display: inline-block;
+        width: 50%;
+    }
+
+    #fortune{
+      font-size: 14px;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+</style>
+  </head>
+  <body>
+    <div class="pageTitle">
+      <h1> your fortune </h1>
+      <img src="my-images-dir/fortune-ball.png">
+
+    </div>
+    <form method="post">
+
+    <select name="user_astrological_sign">
+    <option value="Aquarius">Aquarius</option>
+    <option value="Pisces">Pisces</option>
+    <option value="Aires">Aires</option>
+    <option value="Taurus">Taurus</option>
+    <option value="Gemini">Gemini</option>
+    <option value="Cancer">Cancer</option>
+    <option value="Leo">Leo</option>
+    <option value="Virgo">Virgo</option>
+    <option value="Libra">Libra</option>
+    <option value="Scorpio">Scorpio</option>
+    <option value="Sagittarius">Sagittarius</option>
+    <option value="Capricorn">Capricorn</option>
+    </select>
+  <input type = "submit" value = "The Astrological Sign">
+
+   </form>
+
+  </body>
+</html>

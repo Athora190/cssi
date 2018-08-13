@@ -23,12 +23,11 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-#static directories should go ABOVE the catch all url (.*)
-- url: /my-images-dir
-  static_dir: my-images-dir
-  
 - url: /my-style-dir
   static_dir: my-style-dir
+
+- url: /my-images-dir
+  static_dir: my-images-dir  
 
 - url: .*
   script: main.app
@@ -36,6 +35,5 @@ handlers:
 libraries:
 - name: webapp2
   version: "2.5.2"
-
 - name: jinja2
   version: latest

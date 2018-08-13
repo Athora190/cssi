@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="fortune-style.css">
+    <style>
+    body{
+      background-color: darkslateblue;
+      margin: 10px;
+    }
+
+    h1 {
+      color: white;
+      display: inline-block;
+    }
+
+    img{
+      display: inline-block;
+    }
+
+
+    .main{
+      border: solid white 2px;
+      padding: 10px;
+    }
+
+    #star-img{
+        display: inline-block;
+        width: 50%;
+    }
+
+    #fortune{
+      font-size: 14px;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+</style>
+  </head>
+  <body>
+    <div clas = "pageTitle">
+      <h1> Your sign fortune </h1>
+      <img id="star-img" src="my-images-dir/stars.png"/>
+    </div>
+    <div class="main">
+      <p>
+      for a {{result}} , the stars says:
+    </p>
+    <p id= "fortune">
+      {{ fortune }}
+    </p>
+
+    </div>
+
+  </body>
+</html>
