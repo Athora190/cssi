@@ -34,6 +34,13 @@ import webapp2
 import jinja2
 import os
 import random
+from google.appengine.api import urlfetch
+import urllib
+import json
+
+URL = 'https://www.googleapis.com/customsearch/v1?'
+Key = 'AIzaSyBxJp4PYwX0mwH2VpMoSbUWsAXgM_4qomA'
+Cx = '010840317941384228862:tb3vdehza5i'
 
 
 def get_fortune():
@@ -59,6 +66,17 @@ class FortuneHandler(webapp2.RequestHandler):
         results_templates = jinja_current_directory.get_template('templates/fortune-start.html')
         self.response.write(results_templates.render())
     #add a post method
+class SimpleURLfetcher(webapp2.RequestHandler):
+    def get(self):
+        query = 'yellow'
+        query_params = {'key': Key,'cx':Cx,'q':query}
+        result = urlfetch.fetch(URL + urllib.urlencode(query_params))
+        if result.status_code == 200:
+            self.response.write(result.status_code)
+            self.response.write(result.content)
+        else:
+            self.response.status_code = result.status_code
+
     def post(self):
         random_fortune = get_fortune()
         #results_templates = jinja_current_directory.get_template('templates/fortune-results.html')
@@ -76,5 +94,6 @@ app = webapp2.WSGIApplication([
     #this line routes the main url ('/')  - also know as
     #the root route - to the Fortune Handler
     ('/', HelloHandler),
-    ('/predict', FortuneHandler) #maps '/predict' to the FortuneHandler
+    ('/predict', FortuneHandler), #maps '/predict' to the FortuneHandler
+    ('/simple', SimpleURLfetcher)
 ], debug=True)
